@@ -9,6 +9,10 @@ body {
   margin-top: 40px;
 }
 
+a {
+  color: #009adf;
+}
+
 .top-nav {
   background-color: #fff;
   padding: 15px;
@@ -45,4 +49,48 @@ body {
           transform: translateY(48px) scale(1);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+}
+
+.left-sidebar {
+  margin-top: 40px;
+}
+.left-sidebar_menu {
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+}
+.left-sidebar_menu li {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.left-sidebar_menu li:first-child a {
+  padding-top: 20px;
+}
+.left-sidebar_menu li:last-child a {
+  padding-bottom: 20px;
+}
+.left-sidebar_menu li:hover {
+  background-color: #009adf;
+}
+.left-sidebar_menu li:hover a {
+  color: #fff;
+}
+.left-sidebar_menu li a {
+  display: block;
+  padding: 15px 30px;
+  text-decoration: none;
+  color: #131313;
+  font-size: 16px;
+  font-weight: 400;
+}
+.left-sidebar_object {
+  background-color: #fff;
+  margin-top: 30px;
+}
+.left-sidebar_object-description {
+  padding: 30px;
+}
+.left-sidebar_object-description h3 {
+  text-transform: uppercase;
+  font-weight: 400;
 }
