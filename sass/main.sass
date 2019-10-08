@@ -1,5 +1,6 @@
 @import "colors"
 @import "reset"
+@import "fontello"
 
 html
   font-size: 14px
@@ -8,6 +9,7 @@ body
   background-color: $body-bg
   color: $dark
   font-family: 'Roboto', sans-serif
+  margin: 0
   margin-top: 40px
 
 h2
@@ -20,7 +22,7 @@ a
   padding: 20px 30px
   display: inline-block
   text-decoration: none
-  color: #fff
+  color: $white
   border-radius: 5px
   font-size: 16px
   font-weight: 700
@@ -97,7 +99,7 @@ a
 .directions
   margin-top: 80px
   &-block
-    background-color: #ffffff
+    background-color: $white
     height: 220px
     text-align: center
     margin: 0 15px
@@ -106,3 +108,52 @@ a
     background-repeat: no-repeat
     h3
       color: $active-color
+
+.footer
+  margin-top: 60px
+  padding: 60px 0
+  background-color: $dark
+  color: $footer-text
+  &-policy-link
+    font-size: 12px
+  p
+    margin-bottom: 14px
+  a
+    text-decoration: none
+    color: $footer-text
+    &:hover
+      color: $white
+  small
+    display: block
+    margin-top: 50px
+    line-height: 16px
+    font-size: 10px
+    width: 80%
+  ul
+    list-style: none
+    padding: 0
+    li
+      line-height: 32px
+  &-contacts
+    text-align: right
+    &_phone
+      font-size: 20px
+      font-weight: 700
+      color: $active-color
+  &-social
+    @extend .footer-contacts
+    li
+      display: inline-block
+      a
+        display: inline-block
+        height: 40px
+        width: 40px
+        background-color: rgba($white, 0.1)
+        text-align: center
+        line-height: 42px
+        border-radius: 50%
+        margin-left: 5px
+        transition: all 0.2s
+        &:hover
+          background-color: rgba($white, 0.9)
+          color: $dark
