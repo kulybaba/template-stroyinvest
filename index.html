@@ -33,6 +33,9 @@
                 </div>
                 <!-- /.col-md-auto -->
                 <div class="col-md-auto">
+                    <button class="top-nav_btn">
+                        <i class="icon-menu"></i>
+                    </button>
                     <ul class="top-nav_menu">
                         <li>
                             <a href="#">Главная</a>
@@ -64,6 +67,9 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="left-sidebar">
+                    <div class="left-sidebar_btn">
+                        Категории
+                    </div>
                     <ul class="left-sidebar_menu">
                         <li>
                             <a href="#">Земля</a>
@@ -166,7 +172,7 @@
                     </div>
                 </div>
                 <!-- /.col-md -->
-                <div class="col-md-2">
+                <div class="col-md-2 col-6">
                     <ul class="footer_menu">
                         <li>
                             <a href="#">Главная</a>
@@ -189,7 +195,7 @@
                     </ul>
                 </div>
                 <!-- /.col-md -->
-                <div class="col-md">
+                <div class="col-md col-6">
                     <ul class="footer_menu">
                         <li>
                             <a href="#">Земля</a>
@@ -246,6 +252,7 @@
         <!-- /.container -->
     </footer>
     <!-- /footer -->
+
 <!-- jQuery -->
 <script src="./js/jquery-3.3.1.slim.min.js"></script>
 
@@ -257,8 +264,29 @@
         arrows: false,
         dots: true,
         slidesToShow: 4,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     })
+</script>
+<script>
+    $(document).ready(function () {
+        $('.top-nav_btn').on('click', function (event) {
+            event.preventDefault();
+            $('.top-nav_menu').toggleClass('top-nav_menu__active');
+        });
+
+        $('.left-sidebar_btn').on('click', function (event) {
+            $('.left-sidebar_menu').toggleClass('left-sidebar_menu__active');
+        });
+    });
 </script>
 </body>
 </html>

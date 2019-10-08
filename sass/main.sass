@@ -3,9 +3,10 @@
 @import "fontello"
 
 html
-  font-size: 14px
+  font-size: 10px
 
 body
+  font-size: 14px
   background-color: $body-bg
   color: $dark
   font-family: 'Roboto', sans-serif
@@ -35,6 +36,19 @@ a
 .top-nav
   background-color: $white
   padding: 15px
+  position: relative
+  &_btn
+    display: none
+    width: 30px
+    height: 30px
+    background: transparent
+    border: none
+    font-size: 18px
+    position: absolute
+    right: 15px
+    top: -55px
+    &:hover
+      cursor: pointer
   &_menu
     list-style: none
     padding: 0
@@ -60,7 +74,24 @@ a
             transition: all 0.2s
 
 .left-sidebar
-  margin-top: 40px
+  margin-top: 4rem
+  &_btn
+    display: none
+    background-color: $white
+    padding: 15px
+    position: relative
+    &:hover
+      cursor: pointer
+    &:after
+      content: ''
+      width: 15px
+      height: 15px
+      display: inline-block
+      position: absolute
+      right: 15px
+      border-bottom: 2px solid $dark
+      border-right: 2px solid $dark
+      transform: rotate(42deg)
   &_menu
     background-color: $white
     list-style: none
@@ -117,7 +148,7 @@ a
   &-policy-link
     font-size: 12px
   p
-    margin-bottom: 14px
+    margin-bottom: 1.4rem
   a
     text-decoration: none
     color: $footer-text
@@ -125,7 +156,7 @@ a
       color: $white
   small
     display: block
-    margin-top: 50px
+    margin-top: 5rem
     line-height: 16px
     font-size: 10px
     width: 80%
@@ -157,3 +188,5 @@ a
         &:hover
           background-color: rgba($white, 0.9)
           color: $dark
+
+@import "media"
