@@ -34,3 +34,36 @@
   .footer
     &-contacts
       text-align: left
+
+@media (min-width: 767px) and (max-width: 992px)
+  html
+    font-size: 5px
+  .top-nav
+    &_btn
+      display: block
+    &_menu
+      display: none
+      &__active
+        display: flex
+        margin-bottom: 0
+        justify-content: space-around
+      li
+        line-height: 2
+        margin-left: 0
+        a
+          &:after
+            display: none
+
+  .left-sidebar
+    &_btn
+      display: block
+    &_menu
+      display: none
+      &__active
+        display: block
+    &_object
+      display: none
+
+  .footer
+    &-contacts
+      text-align: left
